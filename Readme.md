@@ -1,9 +1,7 @@
-
-
-### Test of tensorflow
+# TensorFlow_test1
+First try using tensorflow
 
 ### Roadmap
-
-- [ ] learn tensorflow
-- [ ] do stuff with tensorflow
-- [ ] world domination
+- [ ] Lear how to use tensorflow
+- [ ] Do stuff with tensorflow
+- [ ] World domination
