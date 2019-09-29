@@ -11,10 +11,20 @@ data = keras.datasets.imdb
 # Show the structure of the data set
 if False:
     print(train_data[0])
-word_index = imdb.get_word_index()
-word_index = {k: (v+3) for k, v in word_index.item()}
-word_index["<PAD>"] = 0
+
+# Fix the data set index
+word_index = data.get_word_index()
+word_index = {k: (v+3) for k, v in word_index.items()}
+word_index["<PAD>"] = 0         # THe data will be padded so that every input has the same length
 word_index["<START>"] = 1
 word_index["<UNK>"] = 2
 word_index["<UNUSED>"] = 3
 
+reverse_word_index = dict([(value, key) for (key, value) in word_index.items()])
+
+
+def decode_review(text):
+    return " ".join([reverse_word_index.get(i, "?") for i in text])
+
+
+print(decode_review(test_data[0]))
