@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 from tensorflow import keras
 
-is_showimage = False
+is_showimage = True
 epochs_num = 5
 showresults = False
 
