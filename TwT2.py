@@ -9,6 +9,7 @@ epochs_nr = 40
 batch_size_nr = 512
 show_nr = 0
 train_model = False
+use_model = True
 
 if train_model:
     """ Import data in train and test sets"""
@@ -79,5 +80,7 @@ if train_model:
     """ Save the model """
     model.save("model.h5")
 
-model = keras.model.load_model("model.h5")
+""" Load and use a pre made model """
+if use_model:
+    model = keras.model.load_model("model.h5")
 
