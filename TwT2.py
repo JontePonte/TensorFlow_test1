@@ -95,7 +95,7 @@ def review_encode(s):
 
 if use_model:
     model = keras.models.load_model("model.h5")
-    with open("text_test2.txt", encoding="utf-8") as f:
+    with open("text_test1.txt", encoding="utf-8") as f:
         for line in f.readlines():
             nline = line.replace(",", "").replace(".", "").replace("(", "").replace(")", "")\
                 .replace(":", "").strip().split(" ")
